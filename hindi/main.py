@@ -26,7 +26,7 @@ def transcribe(file):
   AudioIn = AudioSegment.from_wav(f'{file}.wav')
   AudioIn = match_target_amplitude(AudioIn, -10)
 
-  text = open(f'{file}_result.txt', 'w+')
+  text = open(f'{file}_result.txt', 'w+', encoding='utf-8')
 
   r = sr.Recognizer()
 
@@ -54,7 +54,7 @@ def transcribe(file):
       audio = r.listen(source)
 
     try:
-      rec = r.recognize_google(audio)
+      rec = r.recognize_google(audio, language='hi-In')
       text.write(rec+". ")
       result+=(f'{rec}. ')
     except sr.UnknownValueError:
@@ -70,7 +70,7 @@ def transcribe(file):
 if __name__ == "__main__":
   config = ConfigParser()
 
-  config.read('v2/config.ini')
+  config.read('hindi/config.ini')
 
   PATH = config.get('directory', 'storage')
   os.chdir(PATH)
