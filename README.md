@@ -11,7 +11,7 @@
   - Add videos to Storage folder
   - For language character output, open its folder in a terminal
   - run command
-    ```
-    python main.py
-    ```
+  ```
+  python main.py
+  ```
   - Output will be generated in the storage folder with name `{file}_result.txt`
