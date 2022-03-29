@@ -13,7 +13,7 @@ Currently supported languages:
   - pydub
 ## To process video
   - Add videos to Storage folder
-  - For language character output, open its folder in a terminal
+  - For language character output, open its folder in a terminal (English/Hindi)
   - run command
   ```
   python main.py
