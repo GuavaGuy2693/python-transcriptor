@@ -1,5 +1,9 @@
 # Python Transcriptor
 ## Video speech text extractor
+This python program takes video input and generates text output containing detected speech.
+Currently supported languages:
+  - English
+  - Hindi
 ## Prerequisites:
   - python 3.x
   - ffmpeg
