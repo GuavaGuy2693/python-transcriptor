@@ -34,7 +34,7 @@ def transcribe(file, PATH):
 
 #Speech recognition
   AudioIn = AudioSegment.from_wav(f'{file}.wav')
-  AudioIn = normalize_audio(AudioIn, -10)
+  AudioIn = normalize_audio(AudioIn, -20)
 
   text = open(f'{os.path.join(PATH, f"{file}_result.txt")}', 'w+', encoding='utf-8')
   
@@ -42,7 +42,7 @@ def transcribe(file, PATH):
   r = sr.Recognizer()
   
   #spliting into chunks
-  chunks = sos(AudioIn, min_silence_len = 200, silence_thresh = -30)
+  chunks = sos(AudioIn, min_silence_len = 200, silence_thresh = -40)
 
   try:
     os.mkdir('audio_chunks')
